@@ -16,6 +16,10 @@ body {
   font-family: 'Public Sans', sans-serif;
   font-weight: 300;
 
+  @include breakpoint-up(large) {
+    font-size: $font-med;
+  }
+
   &.noscroll {
     overflow: hidden;
   }
@@ -31,10 +35,41 @@ a, a:visited, a:hover {
 
 // Spacing 
 .container {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &--py {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  &--px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &--pt {
+    padding-top: 2.25rem;
+  }
+
+  &--pb {
+    padding-bottom: 2.25rem;
+  }
+
+  &--pl {
+    padding-left: 1.5rem;
+  }
+
+  &--pr {
+    padding-right: 1.5rem;
+  }
 }
 
 //Flexbox Styles
@@ -71,7 +106,7 @@ button, .button {
   &:hover {
     opacity: 0.75;
   }
-  
+
 }
 
 ///Visibility
